@@ -46,18 +46,17 @@ class Pwned():
 
     def printOp(self,d):
         if(type(d) is dict):
-            print("inside")
+            
             table = PrettyTable()
             table.field_names=['S.no','Password']
             for i in range(len(d.items())):
                 table.add_row([i,d[i]])
             print(Fore.GREEN)
             print(table)
-
         else:
-            print(d)
+            print(f"{Fore.LIGHTRED_EX}"+d)
         
 
            
 
-pwd = Pwned("mkarthikbaalaji@gmail.com")
+
