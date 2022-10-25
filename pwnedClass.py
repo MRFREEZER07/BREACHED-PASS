@@ -35,22 +35,29 @@ class Pwned():
          
         
         elif '"resultCount":0' in r.text:
-            return "Not Found"
+            self.printOp("MESSAGE --> Not Found")
 
         elif 'Введите корректный email или логин для поиска':         
-            print("MESSAGE --> Enter a valid email address")
+            self.printOp("MESSAGE --> Enter a valid email address")
 
         else:
-            print("MESSAGE --> Unknown Error")
+            self.printOp("MESSAGE --> Unknown Error")
 
 
-    def printOp(self,d,default=None):
-        table = PrettyTable()
-        table.field_names=['S.no','Password']
-        for i in range(len(d.items())):
-            table.add_row([i,d[i]])
-        print(Fore.GREEN)
-        print(table)
+    def printOp(self,d):
+        if(type(d) is dict):
+            print("inside")
+            table = PrettyTable()
+            table.field_names=['S.no','Password']
+            for i in range(len(d.items())):
+                table.add_row([i,d[i]])
+            print(Fore.GREEN)
+            print(table)
+
+        else:
+            print(d)
+        
+
            
 
-pwd = Pwned("mkarthikbaalajmail.com")
+pwd = Pwned("mkarthikbaalaji@gmail.com")

@@ -1,4 +1,4 @@
-str="{\"results\":[],\"resultCount\":0,\"success\":false,\"awailableQueries\":960}"
+d={}
 
-if '"resultCount":0' in  str:
-    print("true")
+if type(d) is dict:
+    print("jkjhgjh")
