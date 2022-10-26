@@ -1,6 +1,6 @@
 # BREACHED-PASS
 
-<h1>Email data breach finder using myrz.org API.</h1>
+<h2>Email data breach finder using myrz.org API.</h2>
 
 ``` 
   USAGE 
